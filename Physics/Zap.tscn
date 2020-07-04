@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Zap/sprite_0.png" type="Texture" id=1]
+[ext_resource path="res://Zap/sprite_4.png" type="Texture" id=2]
+[ext_resource path="res://Zap/sprite_1.png" type="Texture" id=3]
+[ext_resource path="res://Zap/sprite_2.png" type="Texture" id=4]
+[ext_resource path="res://Zap/sprite_3.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 2 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "zap",
+"speed": 5.0
+} ]
+
+[node name="Zap" type="RigidBody2D"]
+position = Vector2( -0.0404797, -2.2264 )
+scale = Vector2( 0.25, 1 )
+mode = 1
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 16.7992, -0.0404806 )
+shape = SubResource( 2 )
+
+[node name="Zap" type="AnimatedSprite" parent="."]
+position = Vector2( 16.7182, 2.06447 )
+frames = SubResource( 1 )
+animation = "zap"
+frame = 2
+playing = true

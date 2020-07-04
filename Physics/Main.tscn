@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Zap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 14.5605, 19.4257, 0, 0, 0, 0, 991.419, 24.2002, 0, 0, 0, 0, 1000.01, 580.905, 0, 0, 0, 0, 12.6506, 578.995, 0, 0, 0, 0, 11.6957, 59.5313, 0, 0, 0, 0, 342.09, 66.2156, 0, 0, 0, 0, 441.399, 63.3509, 0, 0, 0, 0, 916.937, 76.7195, 0, 0, 0, 0, 923.622, 308.759, 0, 0, 0, 0, 913.118, 537.934, 0, 0, 0, 0, 158.75, 544.619, 0, 0, 0, 0, 68.0346, 543.664, 0, 0, 0, 0, 110.05, 243.826, 0, 0, 0, 0, 408.933, 176.984, 0, 0, 0, 0, 721.184, 155.976, 0, 0, 0, 0, 819.538, 192.262, 0, 0, 0, 0, 804.26, 421.437, 0, 0, 0, 0, 759.379, 467.272, 0, 0, 0, 0, 264.743, 456.768, 0, 0, 0, 0, 252.33, 388.016, 0, 0, 0, 0, 296.255, 287.752, 0, 0, 0, 0, 488.189, 218.999, 0, 0, 0, 0, 717.364, 211.36, 0, 0, 0, 0, 762.244, 288.706, 0, 0, 0, 0, 730.733, 373.692, 0, 0, 0, 0, 551.212, 360.324, 0, 0, 0, 0, 428.985, 346.955, 0, 0, 0, 0, 357.368, 370.827 )
+}
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+Zap = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 696.177, 303.372 )
+
+[node name="Zap" parent="." instance=ExtResource( 1 )]
+position = Vector2( -57.2657, -43.8088 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 14.5605, 19.4257 )
+rotation = 0.00488817
