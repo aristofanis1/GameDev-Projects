@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Earth.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+G = 150.0
+
+[node name="Sun" parent="." instance=ExtResource( 1 )]
+position = Vector2( 516.99, 276.062 )
+
+[node name="Earth" parent="." instance=ExtResource( 2 )]
+position = Vector2( 509.963, 75.2898 )
+linear_velocity = Vector2( 50, 0 )
+
+[node name="EarthOrbit" type="Line2D" parent="."]
+width = 2.0
