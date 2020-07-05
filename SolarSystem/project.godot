@@ -19,6 +19,13 @@ config/name="SolarSystem"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=2880
+window/size/height=1800
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [rendering]
 
 environment/default_clear_color=Color( 0.0196078, 0, 0.203922, 1 )
